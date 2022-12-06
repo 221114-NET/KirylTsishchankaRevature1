@@ -1,0 +1,31 @@
+public static List<int> gradingStudents(List<int> grades)
+    {
+        //find the size of the given List
+        int size = grades.Count;
+        
+        //create a new list of integers of an arbitrary size
+        List<int> newGrades = new List<int>();
+        
+        for (int i = 0; i < size; i++)
+        {
+            //convert double to int
+            int res = Convert.ToInt32(grades[i]/5)+1;
+            
+            //if the value of grade is less than 38 or the difference between the grade and the next multiple of 5 is less than 3, no rounding occurs
+            if (grades[i]<38 || 5*res-grades[i]>=3)
+            {
+                newGrades.Add(grades[i]);
+            }
+            else
+            //otherwise, we round the grade up to the next multiple of 5
+            {
+                newGrades.Add(5*res);
+            }
+            
+        }
+        
+        
+        
+        return newGrades;
+ 
+    }
