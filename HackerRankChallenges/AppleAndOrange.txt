@@ -1,0 +1,25 @@
+//initially 0 apples fell on Sam's house
+int apl=0;
+//initially 0 oranges fell on Sam's house
+int orng=0;
+        
+//we check each distance in the apples list
+foreach (int i in apples)
+        {
+//if a+i is >= than the left point and <= than the right point
+//then the apple fell on Sam's house 
+            if (a+i>=s && a+i<=t) apl++;
+        }
+        
+//we check each distance in the oranges list
+foreach (int i in oranges)
+        {
+//if b+i is >= than the left point and <= than the right point
+//then the orange fell on Sam's house 
+            if (b+i>=s && b+i<=t) orng++;
+        } 
+
+//we print the number of apples
+Console.WriteLine(apl);
+//we print the number of oranges
+Console.WriteLine(orng);
