@@ -1,0 +1,21 @@
+
+public static string kangaroo(int x1, int v1, int x2, int v2)
+    {
+
+        //n represents a number of jumps; 
+        //we cast it as double, since x1, x2, v1, v2 are integers
+        double n=(double)(x1-x2)/(v2-v1);
+        
+        string res;
+        
+	   //we check if n is positive and n is an integer,
+        //since the number of jumps should be a positive integer         
+        if (n>0 && n-Math.Truncate(n)==0)
+        res="YES";
+        else
+        res="NO";
+        
+        return res;
+
+    }
+
