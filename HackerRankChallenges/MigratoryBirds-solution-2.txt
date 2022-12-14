@@ -1,0 +1,41 @@
+public static int migratoryBirds(List<int> arr)
+    {
+
+        int bird1=0;
+        int bird2=0;
+        int bird3=0;
+        int bird4=0;
+        int bird5=0;
+        
+        
+
+        foreach (int i in arr)
+        {
+            if(i==1){bird1++;}
+            if(i==2){bird2++;}
+            if(i==3){bird3++;}
+            if(i==4){bird4++;}
+            if(i==5){bird5++;}
+            
+            
+        }
+        
+        int[] birds={bird1,bird2,bird3,bird4,bird5};
+        
+        Console.WriteLine(birds);
+
+        int answ=1;
+
+        for(int i=0; i<=4; i++)
+        {
+            if (birds[i]==birds.Max()) 
+            {
+                answ=i+1;
+                break;
+            }
+                        
+        }
+        
+        return answ;
+
+    }
