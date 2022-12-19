@@ -1,0 +1,11 @@
+public static int hurdleRace(int k, List<int> height)
+    {
+
+        int dif;
+        
+        if (height.Max()-k<0) dif=0;
+        else dif=height.Max()-k;
+
+        return dif;
+
+    }
